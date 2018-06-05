@@ -20,6 +20,7 @@ Portfolio Page
     <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Cardo|Carter+One" rel="stylesheet">
 </head>
 <body>
 
@@ -37,6 +38,7 @@ Portfolio Page
                     <span class="label">GitHub</span></a></li>
                 <li><a href="https://www.linkedin.com/in/toygansevim/" target="_blank"
                        class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><p>Peek Here</p></li>
             </ul>
         </div>
 
@@ -49,13 +51,14 @@ Portfolio Page
     <nav id="menu">
         <ul class="links">
             <li><a href="">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href="#trivia">Trivia Quack </a></li>
             <li><a href="#aaron">AaronAviles.com</a></li>
             <li><a href="#midigan">Midigan Social Media</a></li>
             <li><a href="#igrad">Kent School District | iGrad </a></li>
         </ul>
         <ul class="actions vertical">
-            <li><a href="#" class="button fit">Message Toygan</a></li>
+            <li><a href="#name" class="button fit">Message Toygan</a></li>
         </ul>
     </nav>
 
@@ -66,10 +69,16 @@ Portfolio Page
                 <h1 class="name">Toygan Sevim</h1>
             </header>
             <div class="content">
-                <p>this is the elevator pitch or summary area</p>
-                <ul class="actions">
-                    <li><a href="#contact" class="button next scrolly">Contact me</a></li>
-                </ul>
+                <p class="elevator">Greetings, my name is Toygan Sevim and I thrive on working in diverse groups. I
+                    blithely develop and enforce a competent communication environment to achieve appropriateness,
+                    respect and deliver products with a higher value. I have participated in several team projects where
+                    I developed user login interfaces and informational application forms for Kent School District.
+                    Worked in a pair-programming assignment where we created a trivia question game that uses restful
+                    API's to generate mini multiple-choice games for its users. Switching to Scrum and the Agile
+                    Methodology expanded my work capacity and elevated the quality. I can detect bugs better than the
+                    IDE while Pair-Programming and love to brainstorm. I am eager to become a senior software developer
+                    and eventually a project manager of a software development team that mostly focuses on IOS
+                    application development.</p>
             </div>
         </div>
     </section>
@@ -81,7 +90,7 @@ Portfolio Page
         <section id="one" class="tiles">
             <article id="trivia">
 									<span class="image">
-										<img src="duck.png" alt="Trivia Quack Logo"/>
+										<img src="images/duck.png" alt="Trivia Quack Logo"/>
 									</span>
                 <header class="major">
                     <h3><a href="https://tsevim.greenriverdev.com/328/TriviaQuack" target="_blank" class="link">Trivia
@@ -91,29 +100,49 @@ Portfolio Page
             </article>
             <article id="aaron">
 									<span class="image">
-										<img src="aaron.png" alt="Aaron Aviles Image"/>
+										<img src="images/aaron.png" alt="Aaron Aviles Image"/>
 									</span>
                 <header class="major">
-                    <h3><a href="landing.html" class="link">AaronAviles.com</a></h3>
+                    <h3><a href="http://tsevim.greenriverdev.com/355/AaronAviles/" class="link">AaronAviles.com</a></h3>
                     <p>Personal Website Design</p>
                 </header>
             </article>
             <article id="igrad">
 									<span class="image">
-										<img src="igrad.png" alt="iGrad Logo"/>
+										<img src="images/igrad.png" alt="iGrad Logo"/>
 									</span>
                 <header class="major">
-                    <h3><a href="landing.html" class="link">iGrad Kent</a></h3>
-                    <p></p>
+                    <h3><a href="http://gitgud.greenrivertech.net/login/" class="link">iGrad Kent</a></h3>
+                    <p>Volunteer application development</p>
                 </header>
             </article>
             <article id="midigan">
 									<span class="image">
-										<img src="midigan.png" alt="Midigan Image"/>
+										<img src="images/midigan.png" alt="Midigan Image"/>
 									</span>
                 <header class="major">
-                    <h3><a href="landing.html" class="link">MIDIGAN</a></h3>
+                    <h3><a href="http://tsevim.greenrivertech.net/it207/MIDIGAN/" class="link">MIDIGAN</a></h3>
                     <p>small team project</p>
+                </header>
+            </article>
+
+            <article id="skills">
+									<span class="image">
+										<img src="images/skills.png" alt="Skills Image"/>
+									</span>
+                <header class="major">
+                    <h3><a href="images/skills.png" class="link">Skills</a></h3>
+                    <p>Personal Outcomes</p>
+                </header>
+            </article>
+
+            <article id="pitch">
+									<span class="image">
+										<img src="images/elevator.png" alt="Elevator Image"/>
+									</span>
+                <header class="major">
+                    <h3><a href="https://www.youtube.com/watch?v=7ARD_h6YzNM" class="link">Why TOYGAN SEVIM ?</a></h3>
+                    <p>Lets discuss it at the top floor...</p>
                 </header>
             </article>
         </section>
@@ -125,9 +154,7 @@ Portfolio Page
                     <h2>Goal</h2>
                 </header>
                 <p>What do I want from this program, what are my expectations?.</p>
-                <ul class="actions">
-                    <li><a href="landing.html" class="button next">Get Started</a></li>
-                </ul>
+
             </div>
         </section>
 
@@ -150,7 +177,7 @@ Portfolio Page
                     </div>
                     <div class="field">
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" rows="6"></textarea>
+                        <textarea name="message" id="message" rows="5"></textarea>
                     </div>
                     <ul class="actions">
                         <li><input type="submit" value="Send Message" class="special"/></li>
@@ -158,6 +185,8 @@ Portfolio Page
                     </ul>
                 </form>
             </section>
+
+            <!--contact via email / skype-->
             <section class="split">
                 <section>
                     <div class="contact-method">

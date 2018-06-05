@@ -3,8 +3,8 @@
 
 /*
 	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+	Eddited by: TOYGAN SEVIM
 */
 
 /* Reset */
@@ -2550,6 +2550,7 @@ input[type="radio"] + label:before {
     line-height: 2em;
     text-align: center;
     width: 2em;
+    padding: 0px 0px 0px 2px;
 }
 
 a.icon.alt:before {
@@ -2667,7 +2668,6 @@ ul.alt li:first-child {
 ul.icons {
     cursor: default;
     list-style: none;
-    padding-left: 0;
 }
 
 ul.icons li {
@@ -2690,7 +2690,6 @@ ul.icons li:last-child {
 ul.actions {
     cursor: default;
     list-style: none;
-    padding-left: 0;
 }
 
 ul.actions li {
@@ -3029,6 +3028,8 @@ input[type="button"].next:before,
 button.next:before,
 .button.next:before {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='36px' height='24px' viewBox='0 0 36 24' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 2px%3B %7D%3C/style%3E%3Cline x1='0' y1='12' x2='34' y2='12' /%3E%3Cline x1='25' y1='4' x2='34' y2='12.5' /%3E%3Cline x1='25' y1='20' x2='34' y2='11.5' /%3E%3C/svg%3E");
+    /*background-image: url('http://tsevim.greenriverdev.com/toygan/peronalWebsite/codeIcon.png');*/
+
 }
 
 input[type="submit"].next:after,
@@ -3037,6 +3038,7 @@ input[type="button"].next:after,
 button.next:after,
 .button.next:after {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='36px' height='24px' viewBox='0 0 36 24' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %239bf1ff%3B stroke-width: 2px%3B %7D%3C/style%3E%3Cline x1='0' y1='12' x2='34' y2='12' /%3E%3Cline x1='25' y1='4' x2='34' y2='12.5' /%3E%3Cline x1='25' y1='20' x2='34' y2='11.5' /%3E%3C/svg%3E");
+    /*background-image: url('http://tsevim.greenriverdev.com/toygan/peronalWebsite/codeIcon.png');*/
     opacity: 0;
     z-index: 1;
 }
@@ -3073,6 +3075,7 @@ button.special,
     background-color: #ffffff;
     box-shadow: none;
     color: #242943;
+
 }
 
 input[type="submit"].special:hover, input[type="submit"].special:active,
@@ -4369,15 +4372,23 @@ body.is-menu-visible #menu .inner {
 }
 
 .name {
-    color: red !important;
+    font-family: 'Carter One', cursive;
 }
 
-
-.contact-method:hover{
+.contact-method:hover {
     background-color: rgba(212, 212, 255, 0.1);
 }
 
-
-.contact-method.education:hover{
+.contact-method.education:hover {
     background-color: inherit;
+}
+
+.elevator {
+
+    font-family: 'Cardo', serif;
+    letter-spacing: 0.3px !important;
+    text-transform: initial !important;
+    font-weight: 400 !important;
+    font-size: 0.8em !important;
+
 }
