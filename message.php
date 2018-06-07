@@ -11,65 +11,83 @@
  */
 
 
-$validName = $validEmail = $validMessage = false;
+$validName = false;
+$validEmail = false;
+$validMessage = false;
 
 
 //Check the coming text values for email contact validation
-if($_POST['name'])
+if($_POST['name'] || $_POST['email'] || $_POST['message'])
 {
-    if(validateName($_POST['nameValue'])) //good value
+    if($_POST['name'])
     {
-        echo "<span class='text-success'><i class=\"fa fa-check text-success \" aria-hidden=\"true\"></i></span>";
-        $validName = true;
+        if(validateName($_POST['nameValue'])) //good value
+        {
+            echo "<span class='text-success'><i class=\"fa fa-check text-success \" aria-hidden=\"true\"></i></span>";
+            $validName = true;
 
-    } else
+        } else
+        {
+            echo "<span><p>Please enter a name</p></span>";
+        }
+    }
+    if($_POST['email'])
     {
-        echo "<span><p>Please enter a name</p></span>";
+        if(validateEmail($_POST['emailValue']))
+        {
+            echo "<span class='text-success'><i class=\"fa fa-check text-success \" aria-hidden=\"true\"></i></span>";
+
+            $validEmail = true;
+        } else
+        {
+            echo "<span><p>Please enter a valid email</p></span>";
+
+        }
+    }
+    if($_POST['message'])
+    {
+
+
+        if(validate($_POST['messageValue']))
+        {
+            echo "<span class='text-success'><i class=\"fa fa-check text-success \" aria-hidden=\"true\"></i></span>";
+            $validMessage = true;
+
+        } else
+        {
+            echo "<span><p>Please enter a message</p></span>";
+            $validMessage = false;
+
+        }
+
+
     }
 }
-if($_POST['email'])
+
+
+if($_POST['submitButton'])
 {
-    if(validateEmail($_POST['emailValue']))
-    {
-        echo "<span class='text-success'><i class=\"fa fa-check text-success \" aria-hidden=\"true\"></i></span>";
+    //If all good
+    //    if($validEmail == true && $validName == true && $validMessage == true)
+    //    {
+    $toME = "toygansevim@hotmail.com";
 
-        $validEmail = true;
-    } else
-    {
-        echo "<span><p>Please enter a valid email</p></span>";
+    $email_from = $_POST['email'];
+    $email_subject = "Hello Toygan";
+    $email_body = "You have received a new message from " . $_POST['name'] . "\n" . "Message is:\n" . $_POST['message'];
 
-    }
+    $headers = "From: $email_from \r\n";
+//    echo $toME, $email_subject, $email_body, $headers;
+
+    mail($toME, $email_subject, $email_body, $headers);
+
+    //to, subject, body, headers
+
+    //        echo $toME;
+    //    print_r($toME);
+    //    , $email_subject, $email_body, $headers);
+    //    }
 }
-if($_POST['message'])
-{
-
-
-    if(validate($_POST['messageValue']))
-    {
-        echo "<span class='text-success'><i class=\"fa fa-check text-success \" aria-hidden=\"true\"></i></span>";
-        $validMessage = true;
-
-    } else
-    {
-        echo "<span><p>Please enter a message</p></span>";
-
-    }
-
-
-}
-
-
-//If all good
-if((($validName == $validEmail) == $validMessage) == 1)
-{
-
-
-}
-
-
-$email_from = $_POST['messageValue'];
-$email_subject = "Hello Toygan";
-$email_body = "You have received a new message from $name.\n" . "Message is:\n $message";
 
 
 //validate the message

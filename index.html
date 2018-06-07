@@ -71,8 +71,9 @@ Portfolio Page
             <div class="content">
                 <p class="elevator">Greetings, my name is Toygan Sevim and I thrive on working in diverse groups. I
                     blithely develop and enforce a competent communication environment to achieve appropriateness,
-                    respect and deliver products with a higher value. I have participated in several team projects where
-                    I developed user login interfaces and informational application forms for Kent School District.
+                    respect and deliver products with a higher value. I have participated in several team projects in
+                    which
+                    I developed responsive user login interfaces and informational application forms.
                     Worked in a pair-programming assignment where we created a trivia question game that uses restful
                     API's to generate mini multiple-choice games for its users. Switching to Scrum and the Agile
                     Methodology expanded my work capacity and elevated the quality. I can detect bugs better than the
@@ -237,85 +238,7 @@ Portfolio Page
 <script src="assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="assets/js/main.js"></script>
 
-<script>
-
-
-    $("#submitButton").on('click', function () {
-
-
-        event.preventDefault();
-
-        var success;
-
-        success = document.getElementsByClassName("text-success");
-
-        if (success.length === 6) {
-            //redirect the page to the success form
-            var buttonList = $(".actions");
-
-            var interval = null;
-            setTimeout(function () {
-                interval = setInterval(function () {
-                    // Your code here
-                    buttonList.append("<li><input type=\"\" class='successful' value=\"MESSAGE SENT!\"></li>");
-
-                }, 1000);
-
-                //Stop the functions after 1 minute.
-                setTimeout(function () {
-                    clearInterval(interval);
-                }, 1000);
-            }, 100);
-        }
-        else {
-
-            //if the form missing,
-            $(".empty_form").html("Please fill the form!");
-
-            setTimeout(function () {
-                //wait
-                // console.log("hey");
-                $(".empty_form").html("");
-
-            }, 2000);
-
-
-        }
-
-    });
-
-
-    $("#name").focusout(function () {
-        $.post('message.php',
-            {
-                name: true,
-                nameValue: $(this).val()
-            }, function (results) {
-                $('#username_error').html(results);
-            });
-    });
-
-    $("#message").focusout(function () {
-        $.post('message.php',
-            {
-                message: true,
-                messageValue: $(this).val()
-            }, function (results) {
-                $('#message_error').html(results);
-            });
-    });
-
-    $("#email").focusout(function () {
-        $.post('message.php',
-            {
-                email: true,
-                emailValue: $(this).val()
-            }, function (results) {
-                $('#email_error').html(results);
-            });
-    });
-
-</script>
+<script src="validate.js"></script>
 
 
 </body>
