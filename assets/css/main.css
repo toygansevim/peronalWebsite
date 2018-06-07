@@ -4392,3 +4392,24 @@ body.is-menu-visible #menu .inner {
     font-size: 0.8em !important;
 
 }
+
+.error {
+    color: red;
+    float: right;
+
+}
+
+.successful {
+    border: none; /* Remove borders */
+    color: white; /* Add a text color */
+    padding: 14px 28px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+
+    background-color: #4CAF50; /* Green */
+}
+
+.astrix{
+    color: #681712;
+    font-style: italic;
+    font-size: 1em;
+}
